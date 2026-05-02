@@ -1,0 +1,10 @@
+[package]
+name = "canary-wasm"
+version = "0.6.0"
+edition = "2021"
+description = "WASM sandbox canary — attempts native canary attacks from inside fledge's Wasmtime sandbox"
+
+[profile.release]
+opt-level = "s"
+lto = true
+strip = true

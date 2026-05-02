@@ -1,0 +1,22 @@
+[plugin]
+name = "canary-wasm"
+version = "0.6.0"
+description = "WASM sandbox canary — proves the sandbox blocks native canary attacks"
+author = "CorvidLabs"
+protocol = "fledge-v1"
+runtime = "wasm"
+
+[[commands]]
+name = "canary-wasm"
+description = "Run security tests from inside the WASM sandbox"
+binary = "target/wasm32-wasip1/release/canary-wasm.wasm"
+
+[hooks]
+build = "cargo build --target wasm32-wasip1 --release"
+
+[capabilities]
+exec = false
+store = false
+metadata = false
+filesystem = "none"
+network = false
