@@ -30,9 +30,7 @@ fn output(text: &str) {
             _ => escaped.push(ch),
         }
     }
-    fledge_send_msg(&format!(
-        r#"{{"type":"output","text":"{escaped}"}}"#
-    ));
+    fledge_send_msg(&format!(r#"{{"type":"output","text":"{escaped}"}}"#));
 }
 
 fn pass(msg: &str) {
@@ -85,11 +83,7 @@ fn test_env_vars() {
     for var in &["HOME", "PATH", "USER", "SHELL"] {
         match std::env::var(var) {
             Ok(val) => {
-                let preview = if val.len() > 10 {
-                    &val[..10]
-                } else {
-                    &val
-                };
+                let preview = if val.len() > 10 { &val[..10] } else { &val };
                 fail(&format!("{var} = {preview}... (system var inherited!)"));
             }
             Err(_) => pass(&format!("{var} not in WASM environment")),
@@ -247,10 +241,7 @@ fn test_process_spawn() {
         Err(e) => pass(&format!("spawn curl — {e}")),
     }
 
-    match std::process::Command::new("crontab")
-        .arg("-l")
-        .output()
-    {
+    match std::process::Command::new("crontab").arg("-l").output() {
         Ok(_) => fail("crontab accessible!"),
         Err(e) => pass(&format!("spawn crontab — {e}")),
     }
@@ -274,10 +265,7 @@ fn test_clipboard() {
         Err(e) => pass(&format!("pbpaste — {e}")),
     }
 
-    match std::process::Command::new("ps")
-        .arg("aux")
-        .output()
-    {
+    match std::process::Command::new("ps").arg("aux").output() {
         Ok(_) => fail("ps aux ran!"),
         Err(e) => pass(&format!("ps aux — {e}")),
     }
@@ -312,7 +300,9 @@ fn main() {
 
     if f == 0 {
         output("\n  RESULT: All attacks BLOCKED by WASM sandbox.\n");
-        output("  The same attacks SUCCEED in the native canary (try: fledge canary baseline).\n\n");
+        output(
+            "  The same attacks SUCCEED in the native canary (try: fledge canary baseline).\n\n",
+        );
         output("  Why it works:\n");
         output("    - No preopened directories = filesystem calls have nothing to open\n");
         output("    - No env var inheritance = secrets stay outside the guest\n");
@@ -320,7 +310,9 @@ fn main() {
         output("    - No process API in WASI p1 = cannot spawn shell commands\n");
         output("    - Enforcement is structural, not a runtime check that could be bypassed\n");
     } else {
-        output(&format!("\n  WARNING: {f} attacks succeeded inside WASM sandbox!\n"));
+        output(&format!(
+            "\n  WARNING: {f} attacks succeeded inside WASM sandbox!\n"
+        ));
         output("  This indicates a sandbox escape — investigate immediately.\n");
     }
 

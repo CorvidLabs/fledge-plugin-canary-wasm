@@ -1,5 +1,7 @@
 # fledge-plugin-canary-wasm
 
+[![CI](https://github.com/CorvidLabs/fledge-plugin-canary-wasm/actions/workflows/ci.yml/badge.svg)](https://github.com/CorvidLabs/fledge-plugin-canary-wasm/actions/workflows/ci.yml)
+
 > **WASM (sandboxed) security canary** — proves the Wasmtime sandbox blocks every attack that the native canary exposes.
 >
 > Companion: [fledge-plugin-canary](https://github.com/CorvidLabs/fledge-plugin-canary) — the unsandboxed native counterpart that proves the attacks work in the first place.
