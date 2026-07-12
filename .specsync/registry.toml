@@ -1,0 +1,5 @@
+[registry]
+name = "fledge-plugin-canary-wasm-trust-wave3"
+
+[specs]
+canary-wasm = "specs/canary-wasm/canary-wasm.spec.md"

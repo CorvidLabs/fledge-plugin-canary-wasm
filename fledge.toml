@@ -1,0 +1,10 @@
+# fledge.toml: project task definitions
+[tasks]
+format = "cargo fmt --check"
+lint = "cargo clippy -- -D warnings"
+build-wasm = "cargo build --target wasm32-wasip1 --release"
+artifact = "test -f target/wasm32-wasip1/release/canary-wasm.wasm"
+
+[lanes.verify]
+description = "Format, lint, build, and verify the WASM Canary artifact"
+steps = ["format", "lint", "build-wasm", "artifact"]
