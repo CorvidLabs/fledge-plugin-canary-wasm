@@ -10,5 +10,3 @@ artifact: tasks
 - [x] Add native verification lane.
 - [x] Add Trust policy and workflow.
 - [x] Pass format, Clippy, WASM release build, and artifact check.
-- [ ] Record definition and closing approvals.
-- [ ] Pass hosted checks.

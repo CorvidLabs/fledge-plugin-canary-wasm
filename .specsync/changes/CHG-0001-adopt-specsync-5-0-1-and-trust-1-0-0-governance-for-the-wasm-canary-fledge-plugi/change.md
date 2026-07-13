@@ -1,6 +1,6 @@
 ---
 id: CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-the-wasm-canary-fledge-plugi
-state: draft
+state: accepted
 type: migration
 base_commit: 1ec0ad1ea419a789fb51dd02b77123dad5de0ffb
 ---
@@ -13,7 +13,7 @@ Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for the WASM Canary Fledge plugi
 
 ## Affected Canonical Specs
 
-- `canary-wasm`
+- None
 
 ## Acceptance Criteria
 
@@ -24,4 +24,4 @@ Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for the WASM Canary Fledge plugi
 
 ## No-spec Rationale
 
-Not applicable
+This governance adoption documents existing WASM Canary behavior and verification policy without changing sandbox or runtime semantics.
