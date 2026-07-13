@@ -5,10 +5,10 @@
   "title": "Address valid rollout review and strict documentation findings",
   "description": "Address valid rollout review and strict documentation findings",
   "kind": "documentation",
-  "state": "accepted",
+  "state": "implementing",
   "base_commit": "43fada178b8e9b3fe4dcdebef2cb9ef668410a5d",
   "created_at": 1783929738,
-  "updated_at": 1783948700,
+  "updated_at": 1783952049,
   "affected_specs": [],
   "affected_paths": [
     ".claude/",
