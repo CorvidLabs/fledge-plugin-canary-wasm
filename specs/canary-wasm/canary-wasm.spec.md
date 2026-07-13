@@ -1,6 +1,6 @@
 ---
 module: canary-wasm
-version: 1
+version: 2
 status: active
 files:
   - src/main.rs
@@ -28,8 +28,8 @@ Verify that fledge's Wasmtime sandbox blocks the environment, filesystem, networ
 
 ## Invariants
 
-1. Every native-canary attack must report BLOCKED inside the configured WASM sandbox.
-2. Any readable secret, writable host path, network connection, or spawned process is a LEAKED failure.
+1. Every environment, filesystem, network, and process attack probe implemented by the WASM canary must report BLOCKED inside the configured sandbox.
+2. Any readable secret, writable host path, network connection, or spawned process observed by those probes is a LEAKED failure.
 3. The guest relies only on the declared fledge send, receive, and exit imports.
 4. The release artifact targets `wasm32-wasip1`.
 5. The plugin requests no filesystem, network, or exec capability.
@@ -62,3 +62,4 @@ Then the attempt reports BLOCKED and no content is returned
 | Version | Date | Changes |
 |---------|------|---------|
 | 1 | 2026-07-12 | Document existing WASM sandbox canary behavior for SpecSync 5 adoption. |
+| 2026-07-13 | CHG-0002-address-valid-rollout-review-and-strict-documentation-findings: Address valid rollout review and strict documentation findings |

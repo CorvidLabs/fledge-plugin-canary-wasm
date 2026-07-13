@@ -1,9 +1,9 @@
 {
-  "timestamp": 1783948686,
-  "commit": "43fada178b8e9b3fe4dcdebef2cb9ef668410a5d",
-  "contract_digest": "7e76c501390e779c8cee43a9a5bc7a1f6667860db3e15e205319efea8e3f423d",
-  "workspace_digest": "a119648ac34e21e34a55bcc88487ce98b821b1d46107e0d6b0d135ff233cea33",
-  "acceptance_input_digest": "911f0c5cac50724529e839e3a81d0a3c57024742906a9d2de0a428fc05a6db42",
+  "timestamp": 1783953150,
+  "commit": "f801d4686424fcab34e5ecbe0dc3dcb7754cd68e",
+  "contract_digest": "d0f0a9a2fe122cf7a1257359a5e8dd462f251d2a8826b88ab7f60e5f5bb2294b",
+  "workspace_digest": "03076bd04ac3ce6cacb79dc49949a512b750c9a77cafd4097467e3370e1812cf",
+  "acceptance_input_digest": "3545c90db320212f0a9fb9ef10d2d25c38b264b8d0dc4d0ca90b578f111ea146",
   "passed": true,
   "commands": [
     {
@@ -12,5 +12,7 @@
       "exit_code": 0
     }
   ],
-  "requirement_ids": []
+  "requirement_ids": [
+    "REQ-canary-wasm-001"
+  ]
 }

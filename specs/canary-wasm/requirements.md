@@ -10,7 +10,11 @@ spec: canary-wasm.spec.md
 
 ### REQ-canary-wasm-001
 
-The plugin SHALL report BLOCKED for host environment, filesystem, network, process, and persistence access attempts.
+The plugin SHALL report BLOCKED for every environment, filesystem, network, and process attack probe implemented by the WASM canary.
+
+Acceptance Criteria
+- Each probe implemented in `src/main.rs` contributes BLOCKED or LEAKED evidence.
+- The final result fails when any implemented probe reports LEAKED.
 
 ### REQ-canary-wasm-002
 
