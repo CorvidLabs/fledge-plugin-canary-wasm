@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "CHG-0002-address-valid-rollout-review-and-strict-documentation-findings",
+  "slug": "address-valid-rollout-review-and-strict-documentation-findings",
+  "title": "Address valid rollout review and strict documentation findings",
+  "description": "Address valid rollout review and strict documentation findings",
+  "kind": "documentation",
+  "state": "accepted",
+  "base_commit": "43fada178b8e9b3fe4dcdebef2cb9ef668410a5d",
+  "created_at": 1783929738,
+  "updated_at": 1783948700,
+  "affected_specs": [],
+  "affected_paths": [
+    ".claude/",
+    ".codex/",
+    ".cursor/",
+    ".specsync/changes/"
+  ],
+  "no_spec_change": true,
+  "no_spec_change_rationale": "Generated agent guidance and acceptance-criteria wording are corrected without changing WASM Canary behavior.",
+  "acceptance_criteria": [
+    "Generated guidance and acceptance criteria are structurally correct",
+    "review findings are addressed",
+    "and WASM native verification remains green."
+  ],
+  "selected_artifacts": [
+    "context",
+    "docs"
+  ],
+  "dependencies": [],
+  "answers": {
+    "architecture_risk": "no",
+    "public_contract": "no"
+  }
+}
