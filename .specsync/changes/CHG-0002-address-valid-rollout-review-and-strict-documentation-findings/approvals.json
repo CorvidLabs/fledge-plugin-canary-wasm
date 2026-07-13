@@ -1,0 +1,18 @@
+{
+  "approvals": [
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783929824,
+      "digest": "7e76c501390e779c8cee43a9a5bc7a1f6667860db3e15e205319efea8e3f423d",
+      "note": "Approved under the active user-authorized organization rollout to resolve valid review findings and merge green PRs."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783948700,
+      "digest": "990cc0f79fd35a147131760abac775c8d5733958673a690bae008be501547cfa",
+      "note": "Authorized non-semantic review corrections verified successfully with the WASI release artifact; prior approval history preserved and hosted CI remains pending."
+    }
+  ]
+}

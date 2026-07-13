@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-the-wasm-canary-fledge-plugi",
+  "slug": "adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-the-wasm-canary-fledge-plugi",
+  "title": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for the WASM Canary Fledge plugin",
+  "description": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for the WASM Canary Fledge plugin",
+  "kind": "migration",
+  "state": "accepted",
+  "base_commit": "1ec0ad1ea419a789fb51dd02b77123dad5de0ffb",
+  "created_at": 1783875587,
+  "updated_at": 1783948824,
+  "affected_specs": [],
+  "affected_paths": [
+    "src/",
+    ".github/",
+    ".specsync/",
+    "specs/",
+    ".trust.toml",
+    "fledge.toml"
+  ],
+  "no_spec_change": true,
+  "no_spec_change_rationale": "This governance adoption documents existing WASM Canary behavior and verification policy without changing sandbox or runtime semantics.",
+  "acceptance_criteria": [
+    "SpecSync strict check passes at 100 percent; all four integrations report installed; Trust doctor and verification pass; formatting",
+    "Clippy",
+    "wasm32-wasip1 release build and artifact verification remain green"
+  ],
+  "selected_artifacts": [
+    "context",
+    "research",
+    "design",
+    "plan",
+    "tasks",
+    "testing",
+    "docs"
+  ],
+  "dependencies": [],
+  "answers": {
+    "architecture_risk": "yes",
+    "public_contract": "no"
+  }
+}
