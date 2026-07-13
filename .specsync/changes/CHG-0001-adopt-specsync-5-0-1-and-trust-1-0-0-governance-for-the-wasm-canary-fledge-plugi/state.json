@@ -5,10 +5,10 @@
   "title": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for the WASM Canary Fledge plugin",
   "description": "Adopt SpecSync 5.0.1 and Trust 1.0.0 governance for the WASM Canary Fledge plugin",
   "kind": "migration",
-  "state": "implementing",
+  "state": "verifying",
   "base_commit": "1ec0ad1ea419a789fb51dd02b77123dad5de0ffb",
   "created_at": 1783875587,
-  "updated_at": 1783952049,
+  "updated_at": 1783952239,
   "affected_specs": [],
   "affected_paths": [
     "src/",
