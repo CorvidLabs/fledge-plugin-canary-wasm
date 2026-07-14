@@ -20,6 +20,77 @@
       "timestamp": 1783948824,
       "digest": "9bd15c52fb44a4a8065b925a2527bbe5fa01cd83a5f5bb708566b382cd2d40bd",
       "note": "Fresh verification covers final non-semantic review corrections; superseded closing approval replaced while prior history remains preserved."
+    },
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783952049,
+      "digest": "8656bc4c690fdf37dd011b8b6894a9b48abb4a825bc7cc9c157719e2bcd1850c",
+      "note": "Fresh definition approval for the user-authorized audited reopen after valid non-semantic review corrections; prior approval history preserved."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783953160,
+      "digest": "bee48cc83f96c83e64c2b2acf31a2f022509ac9bc9360414d139e4bfb79f7e7c",
+      "note": "Fresh closing approval after committed-head native verification of the authorized non-semantic review corrections."
+    },
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783957191,
+      "digest": "8656bc4c690fdf37dd011b8b6894a9b48abb4a825bc7cc9c157719e2bcd1850c",
+      "note": "Fresh definition approval under explicit audit-risk authorization; prior approval history preserved and current corrected artifacts reviewed."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783957798,
+      "digest": "f0177e928ce7cd6eac86ed9283e978518b456d19c265a8bc6fad9e93c379ae1c",
+      "note": "Fresh closing approval under explicit audit-risk authorization after successful committed-head native re-verification."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783989115,
+      "digest": "3324b5e39ca8d4690bc2befe3777a1e04d3e96a5eff87299ae04750042fde1a7",
+      "note": "Fresh closing approval after successful WASI verification of the corrected delivery state"
+    }
+  ],
+  "reopenings": [
+    {
+      "schema_version": 1,
+      "change_id": "CHG-0001-adopt-specsync-5-0-1-and-trust-1-0-0-governance-for-the-wasm-canary-fledge-plugi",
+      "actor": "user:0xLeif",
+      "reason": "Fresh verification required after authorized contract-documentation and rollout review corrections",
+      "timestamp": 1783988874,
+      "from_state": "accepted",
+      "to_state": "verifying",
+      "superseded_approval": {
+        "gate": "acceptance",
+        "actor": "user:0xLeif",
+        "timestamp": 1783957798,
+        "digest": "f0177e928ce7cd6eac86ed9283e978518b456d19c265a8bc6fad9e93c379ae1c",
+        "note": "Fresh closing approval under explicit audit-risk authorization after successful committed-head native re-verification."
+      },
+      "prior_verification": {
+        "timestamp": 1783957642,
+        "commit": "0afdfae5a28e2106c12f57fd7b4db5e668074623",
+        "contract_digest": "8656bc4c690fdf37dd011b8b6894a9b48abb4a825bc7cc9c157719e2bcd1850c",
+        "workspace_digest": "bc14be4b5f11a4ba879f6f7d844116fb7fe7961b24894c8ae0ee773449e910a2",
+        "acceptance_input_digest": "d4052b552f72e2327699bd3d660a3712e4c73a1c961e30a4f5a6fa27df708546",
+        "passed": true,
+        "commands": [
+          {
+            "command": "fledge lanes run verify",
+            "success": true,
+            "exit_code": 0
+          }
+        ],
+        "requirement_ids": []
+      },
+      "stale_acceptance_input_digest": "d4052b552f72e2327699bd3d660a3712e4c73a1c961e30a4f5a6fa27df708546",
+      "current_acceptance_input_digest": "8e7e10507aa2ee4e190f796814013af06c0a3e0b0a3a08e08b41f469b0a0c104"
     }
   ]
 }

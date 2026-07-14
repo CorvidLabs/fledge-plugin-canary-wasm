@@ -13,14 +13,15 @@ Address valid rollout review and strict documentation findings
 
 ## Affected Canonical Specs
 
-- None
+- `canary-wasm`
 
 ## Acceptance Criteria
 
-- Generated guidance and acceptance criteria are structurally correct
+- Generated guidance, lifecycle path coverage, and acceptance criteria are structurally correct
+- the canonical contract is limited to the attack probes the WASM canary implements
 - review findings are addressed
 - and WASM native verification remains green.
 
 ## No-spec Rationale
 
-Generated agent guidance and acceptance-criteria wording are corrected without changing WASM Canary behavior.
+Not applicable

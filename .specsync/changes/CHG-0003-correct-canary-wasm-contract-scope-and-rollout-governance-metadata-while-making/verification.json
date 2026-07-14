@@ -1,0 +1,18 @@
+{
+  "timestamp": 1783989080,
+  "commit": "ceb40d92bd3aaaf231ffef6d1033fbfc53a75c42",
+  "contract_digest": "3dd2d05556601aafee737e99cd95f6159ecd1ffdd802c9aaf8c58d9d6a15f291",
+  "workspace_digest": "72cf6eecee4ffbee96cda349bf9539d43813959bb3a058ccfb08992b34bd4eef",
+  "acceptance_input_digest": "2fce1ad6058d593c3c716000fffefceb417ef78df21c819ab74f4c824be5002b",
+  "passed": true,
+  "commands": [
+    {
+      "command": "fledge lanes run verify",
+      "success": true,
+      "exit_code": 0
+    }
+  ],
+  "requirement_ids": [
+    "REQ-canary-wasm-001"
+  ]
+}

@@ -6,26 +6,34 @@
   "description": "Address valid rollout review and strict documentation findings",
   "kind": "documentation",
   "state": "accepted",
+  "canonical_applied": true,
   "base_commit": "43fada178b8e9b3fe4dcdebef2cb9ef668410a5d",
   "created_at": 1783929738,
-  "updated_at": 1783948700,
-  "affected_specs": [],
+  "updated_at": 1783989115,
+  "affected_specs": [
+    "canary-wasm"
+  ],
   "affected_paths": [
     ".claude/",
     ".codex/",
     ".cursor/",
+    ".gemini/",
+    ".specsync/sdd.json",
+    "specs/canary-wasm/",
     ".specsync/changes/"
   ],
-  "no_spec_change": true,
-  "no_spec_change_rationale": "Generated agent guidance and acceptance-criteria wording are corrected without changing WASM Canary behavior.",
+  "no_spec_change": false,
+  "no_spec_change_rationale": null,
   "acceptance_criteria": [
-    "Generated guidance and acceptance criteria are structurally correct",
+    "Generated guidance, lifecycle path coverage, and acceptance criteria are structurally correct",
+    "the canonical contract is limited to the attack probes the WASM canary implements",
     "review findings are addressed",
     "and WASM native verification remains green."
   ],
   "selected_artifacts": [
     "context",
-    "docs"
+    "docs",
+    "testing"
   ],
   "dependencies": [],
   "answers": {

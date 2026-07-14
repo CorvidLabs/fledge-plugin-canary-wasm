@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "CHG-0003-correct-canary-wasm-contract-scope-and-rollout-governance-metadata-while-making",
+  "slug": "correct-canary-wasm-contract-scope-and-rollout-governance-metadata-while-making",
+  "title": "Correct Canary WASM contract scope and rollout governance metadata while making Gemini create-change guidance shell-safe",
+  "description": "Correct Canary WASM contract scope and rollout governance metadata while making Gemini create-change guidance shell-safe",
+  "kind": "documentation",
+  "state": "accepted",
+  "canonical_applied": true,
+  "base_commit": "ceb40d92bd3aaaf231ffef6d1033fbfc53a75c42",
+  "created_at": 1783988824,
+  "updated_at": 1783989087,
+  "affected_specs": [
+    "canary-wasm"
+  ],
+  "affected_paths": [
+    "specs/canary-wasm/canary-wasm.spec.md",
+    ".specsync/sdd.json",
+    ".gemini/commands/specsync/create-change.toml"
+  ],
+  "no_spec_change": false,
+  "no_spec_change_rationale": null,
+  "acceptance_criteria": [
+    "Purpose and Public API describe only implemented environment filesystem network and process probes; CHG-0002 changelog row records version 2; all four installed agent directories are meaningful paths; Gemini guidance passes intent as exactly one shell argument; strict SpecSync coverage and native WASM verification pass"
+  ],
+  "selected_artifacts": [
+    "context",
+    "research",
+    "design",
+    "plan",
+    "tasks",
+    "testing",
+    "docs",
+    "requirements"
+  ],
+  "dependencies": [],
+  "answers": {
+    "architecture_risk": "yes",
+    "public_contract": "yes"
+  }
+}

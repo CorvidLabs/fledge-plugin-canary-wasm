@@ -1,6 +1,6 @@
 ---
 module: canary-wasm
-version: 1
+version: 3
 status: active
 files:
   - src/main.rs
@@ -13,7 +13,7 @@ depends_on: []
 
 ## Purpose
 
-Verify that fledge's Wasmtime sandbox blocks the environment, filesystem, network, process, and persistence attacks demonstrated by the native Canary plugin.
+Verify that fledge's Wasmtime sandbox blocks the environment, filesystem, network, and process attacks implemented by the WASM Canary plugin.
 
 ## Public API
 
@@ -21,15 +21,15 @@ Verify that fledge's Wasmtime sandbox blocks the environment, filesystem, networ
 |---------|-----------------|
 | Environment variables | Sensitive and host variables are absent. |
 | Filesystem reads | Credentials, host files, traversal, and directory listing are blocked. |
-| Filesystem writes | Temporary, working-tree, hook, and persistence writes are blocked. |
+| Filesystem writes | Temporary, working-tree, and hook writes are blocked. |
 | Network | External TCP and exfiltration tools are unavailable. |
 | Process execution | Shell commands and host utilities cannot be spawned. |
 | Fledge host calls | Communication occurs only through declared fledge WASM imports. |
 
 ## Invariants
 
-1. Every native-canary attack must report BLOCKED inside the configured WASM sandbox.
-2. Any readable secret, writable host path, network connection, or spawned process is a LEAKED failure.
+1. Every environment, filesystem, network, and process attack probe implemented by the WASM canary must report BLOCKED inside the configured sandbox.
+2. Any readable secret, writable host path, network connection, or spawned process observed by those probes is a LEAKED failure.
 3. The guest relies only on the declared fledge send, receive, and exit imports.
 4. The release artifact targets `wasm32-wasip1`.
 5. The plugin requests no filesystem, network, or exec capability.
@@ -62,3 +62,5 @@ Then the attempt reports BLOCKED and no content is returned
 | Version | Date | Changes |
 |---------|------|---------|
 | 1 | 2026-07-12 | Document existing WASM sandbox canary behavior for SpecSync 5 adoption. |
+| 2 | 2026-07-13 | Address valid rollout review and strict documentation findings. |
+| 3 | 2026-07-14 | CHG-0003-correct-canary-wasm-contract-scope-and-rollout-governance-metadata-while-making: Correct Canary WASM contract scope and rollout governance metadata while making Gemini create-change guidance shell-safe |
