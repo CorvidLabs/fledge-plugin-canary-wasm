@@ -34,6 +34,51 @@
       "timestamp": 1783953161,
       "digest": "6fb80045a88b6ba8d5b3a1c4c183af591ea34e4c59485d53199b7dafa84075a3",
       "note": "Fresh closing approval after committed-head native verification of the authorized non-semantic review corrections."
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783989115,
+      "digest": "e23f4dd3964035a346ff6b78363e53c4a16955c92754a6bdcc4497c9b2140904",
+      "note": "Fresh closing approval after successful WASI verification of the corrected delivery state"
+    }
+  ],
+  "reopenings": [
+    {
+      "schema_version": 1,
+      "change_id": "CHG-0002-address-valid-rollout-review-and-strict-documentation-findings",
+      "actor": "user:0xLeif",
+      "reason": "Fresh verification required after authorized contract-documentation and rollout review corrections",
+      "timestamp": 1783988875,
+      "from_state": "accepted",
+      "to_state": "verifying",
+      "superseded_approval": {
+        "gate": "acceptance",
+        "actor": "user:0xLeif",
+        "timestamp": 1783953161,
+        "digest": "6fb80045a88b6ba8d5b3a1c4c183af591ea34e4c59485d53199b7dafa84075a3",
+        "note": "Fresh closing approval after committed-head native verification of the authorized non-semantic review corrections."
+      },
+      "prior_verification": {
+        "timestamp": 1783953150,
+        "commit": "f801d4686424fcab34e5ecbe0dc3dcb7754cd68e",
+        "contract_digest": "d0f0a9a2fe122cf7a1257359a5e8dd462f251d2a8826b88ab7f60e5f5bb2294b",
+        "workspace_digest": "03076bd04ac3ce6cacb79dc49949a512b750c9a77cafd4097467e3370e1812cf",
+        "acceptance_input_digest": "3545c90db320212f0a9fb9ef10d2d25c38b264b8d0dc4d0ca90b578f111ea146",
+        "passed": true,
+        "commands": [
+          {
+            "command": "fledge lanes run verify",
+            "success": true,
+            "exit_code": 0
+          }
+        ],
+        "requirement_ids": [
+          "REQ-canary-wasm-001"
+        ]
+      },
+      "stale_acceptance_input_digest": "3545c90db320212f0a9fb9ef10d2d25c38b264b8d0dc4d0ca90b578f111ea146",
+      "current_acceptance_input_digest": "5e1f9383112b588e617ca4fed0c578ae5e6fbfe8df4ea7e458e32151af44a9a5"
     }
   ]
 }

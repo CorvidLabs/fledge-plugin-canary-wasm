@@ -6,9 +6,10 @@
   "description": "Address valid rollout review and strict documentation findings",
   "kind": "documentation",
   "state": "accepted",
+  "canonical_applied": true,
   "base_commit": "43fada178b8e9b3fe4dcdebef2cb9ef668410a5d",
   "created_at": 1783929738,
-  "updated_at": 1783953161,
+  "updated_at": 1783989115,
   "affected_specs": [
     "canary-wasm"
   ],

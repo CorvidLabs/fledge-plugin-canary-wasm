@@ -1,0 +1,26 @@
+{
+  "approvals": [
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783988873,
+      "digest": "06b53ac0d29e8ce0876ed80c7d2e58c6407d59f62e467b8f3a8779de7c7a86a6",
+      "note": "Approved accurate public-contract and non-semantic rollout governance correction"
+    },
+    {
+      "gate": "definition",
+      "actor": "user:0xLeif",
+      "timestamp": 1783989069,
+      "digest": "3dd2d05556601aafee737e99cd95f6159ecd1ffdd802c9aaf8c58d9d6a15f291",
+      "note": "Fresh definition approval after accurately classifying the security-contract correction and adding requirement-linked verification"
+    },
+    {
+      "gate": "acceptance",
+      "actor": "user:0xLeif",
+      "timestamp": 1783989087,
+      "digest": "055ec8d3b00f8f34efe96d690f058aeab6bdcfd1bf4844fcd0aff43961b68131",
+      "note": "Closing approval after successful requirement-linked WASI verification of the accurate security contract"
+    }
+  ],
+  "reopenings": []
+}
