@@ -1,6 +1,6 @@
 ---
 id: CHG-0003-correct-canary-wasm-contract-scope-and-rollout-governance-metadata-while-making
-state: accepted
+state: archived
 type: documentation
 base_commit: ceb40d92bd3aaaf231ffef6d1033fbfc53a75c42
 ---
